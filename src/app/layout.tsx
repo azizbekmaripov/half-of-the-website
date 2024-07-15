@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
+const inter = Inter({ subsets: ["latin"] }); //shrit
+import ImageBg from "../assets/images/main.jpg";
+import Image from "next/image"
+import MainContent from "@/components/MainContent";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +20,18 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+      <Image src={ImageBg}
+      // width={1000}
+      // height={1000}
+      alt='Main Image'
+      className='bg-image'
+      fill={true}
+      />
+        <Navbar />
+        <MainContent/>
+        {/* <VideoPlayer/> */}
+        {children}</body>
     </html>
   );
 }
