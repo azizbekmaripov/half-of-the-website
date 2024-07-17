@@ -8,15 +8,85 @@ body {
   font-family: "Raleway", sans-serif;
   padding: 0;
   margin: 0;
-  box-sizing: border-box ;
+  box-sizing: border-box;
 }
-
 
 .bg-image {
   object-fit: cover;
   z-index: -5;
-  filter:brightness(60%)
+  filter: brightness(60%);
+  position: fixed;
+}
+.combined {
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-image: url("../assets/images/main.jpg");
+  background-attachment: fixed;
+}
+
+.combined::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(66, 66, 218); /* Adding a semi-transparent blue overlay */
+  background-image: url("../assets/images/main.jpg");
+  background-position: inherit;
+  background-size: inherit;
+  background: linear-gradient(to bottom, rgb(24, 8, 68), transparent);
+  background-attachment: inherit;
+  filter: brightness(60%);
 }
 
 
-  
+.video-player {
+  position: relative;
+  background-size: cover;
+  background-image: url("../assets/images/main.jpg");
+  background-attachment: fixed;
+}
+
+.video-player::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: inherit;
+  background-attachment: inherit;
+  filter: brightness(60%); 
+}
+
+.video-player > div {
+  position: relative;
+}
+
+.about-result {
+  position: relative;
+  background-size: cover;
+  background-image: url("../assets/images/main.jpg");
+  background-attachment: fixed;
+}
+
+.about-result::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-size: inherit;
+  background-attachment: inherit;
+  filter: brightness(60%); 
+}
+
+.about-result > div {
+  position: relative;
+}
+
