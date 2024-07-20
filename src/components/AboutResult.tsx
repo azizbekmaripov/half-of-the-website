@@ -31,7 +31,7 @@ const AboutResult = () => {
         {resultNumbers.map((item, index) => (
           <div key={index} className='flex flex-col items-center'>
             <h1 className='text-xl p-3 font-medium mb-3 text-white'>{item.name}</h1>
-            <div className='w-[151px] h-32 bg-yellow-400 text-black text-4xl font-bold rounded-3xl flex items-center justify-center'>
+            <div className='w-[150px] h-32 bg-yellow-400 text-black text-4xl font-bold rounded-3xl flex items-center justify-center'>
               {item.number}<span>+</span>
             </div>
           </div>
